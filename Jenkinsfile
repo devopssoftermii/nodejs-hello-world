@@ -1,5 +1,5 @@
 pipeline {
-  agent UbuntuSlave01
+  agent { lable 'UbuntuSlave01' } 
   stages {
     stage ('demo') {
       steps {
