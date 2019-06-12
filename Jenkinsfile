@@ -1,9 +1,12 @@
 pipeline {
-  agent { label 'UbuntuSlave01' } 
+  agent { label 'UbuntuSlave01' }
+libraries {
+ lib('lib-demo@master') 
+} 
   stages {
     stage ('demo') {
       steps {
-        echo 'hello world!'
+        hello 'somebody'
         }
     }    
   }
