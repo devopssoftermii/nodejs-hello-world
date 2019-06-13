@@ -5,8 +5,11 @@ libraries {
 } 
   stages {
     stage ('demo') {
+      agent {
+        docker { image 'node:7-alpine' }
+      }
       steps {
-        call 'somebody'
+        sh "node --version"
         }
     }    
   }
