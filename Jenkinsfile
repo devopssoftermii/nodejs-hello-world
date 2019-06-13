@@ -1,7 +1,7 @@
 pipeline {
   agent { label 'UbuntuSlave01' }
 libraries {
- lib('lib-demo@master') 
+ lib('lib-demo@stage') 
 } 
   stages {
     stage ('build image') {
